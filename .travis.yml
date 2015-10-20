@@ -22,8 +22,5 @@ before_install:
 virtualenv:
   system_site_packages: true
   
-install:
-  - pip install pygobject
-
 script:
   - python MainWindow.py
