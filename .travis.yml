@@ -11,4 +11,4 @@ virtualenv:
   system-site-packages: True
 
 script:
-  - python3 MainWindow.py
+  - ./MainWindow.py
