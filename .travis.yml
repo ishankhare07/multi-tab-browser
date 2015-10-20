@@ -1,13 +1,26 @@
 language: python
 
 python:
-  - '3.4'
+  - '3.2'
+env:
+  - GI_INSTALL="python3-gi"
+  - GI_INSTALL="python-gi"
+
+matrix:
+  exclude:
+    - env: GI_INSTALL="python3-gi"
+      python: "2.7"
+    - env: GI_INSTALL="python-gi"
+      python: "3.2"
 
 before_install:
   - sudo apt-get update
-  - sudo apt-get install python3-gi gir1.2-gtk-3.0
-  - deactivate
-  - source ~/virtualenv/python3.4/bin/activate
+  - sudo apt-get install python3-gi gir1.2-gtk-3.0 gtk+3.0
+  - "export DISPLAY=:99.0"
+  - sh -e /etc/init.d/xvfb start
+
+virtualenv:
+  system_site_packages: true
   
 install:
   - pip install pygobject
