@@ -7,5 +7,8 @@ before_install:
   - sudo apt-get update
   - sudo apt-get install python3-gi gir1.2-gtk-3.0
 
+virtualenv:
+  system-site-packages: True
+
 script:
   - python3 MainWindow.py
