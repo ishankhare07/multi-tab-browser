@@ -1,4 +1,4 @@
-if [ $EUID != "0" ]; then
+if [ "$EUID" != "0" ]; then
   gksu "$0 $@"
 else
   echo "installing dependencies"
