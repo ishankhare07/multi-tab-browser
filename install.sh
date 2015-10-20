@@ -1,5 +1,5 @@
 if [ "$EUID" != "0" ]; then
-  gksu "$0 $@"
+  exec gksu "$0 $@"
 else
   echo "installing dependencies"
   echo "======================="
