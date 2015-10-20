@@ -11,18 +11,13 @@ A webkit based browser in python and gtk
 wget -O- https://raw.githubusercontent.com/ishankhare07/multi-tab-browser/master/install.sh | sh
 ```
 
-* Clone the repo
+## Running
+* Clone the repo and navigate to the cloned directory
 ```shell
 git clone git@github.com:ishankhare07/multi-tab-browser.git
-```
-
-* Navigate to the cloned directory
-```shell
 cd multi-tab-browser
 ```
-
-## Running
-Run the following
+* Run the following
 ```shell
 python3 run.py
 ```
